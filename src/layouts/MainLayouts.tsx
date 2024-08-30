@@ -8,10 +8,10 @@ export default function MainLayouts() {
         <>
             <div className="h-screen flex flex-col  bg-[#E0E0E2]">
                 <Topbar />
-                <div className="flex flex-1 h-full">
+                <div className="flex flex-1">
                     <Sidebar />
                     <div
-                        className="flex-1 w-full h-full overflow-hidden p-2 "
+                        className="flex-1 w-full overflow-hidden p-2 "
                     >
                         <Outlet />
                     </div>

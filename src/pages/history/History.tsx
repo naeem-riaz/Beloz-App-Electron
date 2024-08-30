@@ -36,7 +36,7 @@ const History: React.FC = () => {
             callStart: "10:00 AM",
             callEnd: "10:30 AM",
             duration: "30 mins",
-            location: "	3686 Parthenia Avenue, Louisville, Ky, Usa",
+            location: "3686 Parthenia Avenue, Louisville, Ky, USA",
             totalTimeForSession: "30 mins",
             status: "Completed",
             reason: "N/A",
@@ -51,7 +51,7 @@ const History: React.FC = () => {
             callStart: "11:00 AM",
             callEnd: "11:45 AM",
             duration: "45 mins",
-            location: "Los Angeles",
+            location: "Los Angeles, CA, USA",
             totalTimeForSession: "45 mins",
             status: "Cancelled",
             reason: "Client Request",
@@ -59,7 +59,68 @@ const History: React.FC = () => {
             interpreter: "No",
             canceledBy: "Client"
         },
+        {
+            requester: "Michael Johnson",
+            language: "French",
+            dateTime: "2024-08-29 12:30 PM",
+            callStart: "12:30 PM",
+            callEnd: "1:00 PM",
+            duration: "30 mins",
+            location: "4256 Sweeney Road, San Francisco, CA, USA",
+            totalTimeForSession: "30 mins",
+            status: "Completed",
+            reason: "N/A",
+            amount: "$150",
+            interpreter: "Yes",
+            canceledBy: "N/A"
+        },
+        {
+            requester: "Emily Davis",
+            language: "Mandarin",
+            dateTime: "2024-08-29 02:00 PM",
+            callStart: "02:00 PM",
+            callEnd: "02:40 PM",
+            duration: "40 mins",
+            location: "12345 Oak Avenue, Apartment 56B, New York, NY, USA",
+            totalTimeForSession: "40 mins",
+            status: "Completed",
+            reason: "N/A",
+            amount: "$180",
+            interpreter: "Yes",
+            canceledBy: "N/A"
+        },
+        {
+            requester: "William Brown",
+            language: "German",
+            dateTime: "2024-08-29 03:15 PM",
+            callStart: "03:15 PM",
+            callEnd: "03:45 PM",
+            duration: "30 mins",
+            location: "7890 Maple Street, Suite 102, Austin, TX, USA",
+            totalTimeForSession: "30 mins",
+            status: "Cancelled",
+            reason: "Interpreter Unavailable",
+            amount: "$130",
+            interpreter: "No",
+            canceledBy: "Interpreter"
+        },
+        {
+            requester: "Sophia Wilson",
+            language: "Russian",
+            dateTime: "2024-08-29 04:30 PM",
+            callStart: "04:30 PM",
+            callEnd: "05:15 PM",
+            duration: "45 mins",
+            location: "5678 Elm Drive, Block C, Apartment 12, Chicago, IL, USA",
+            totalTimeForSession: "45 mins",
+            status: "Completed",
+            reason: "N/A",
+            amount: "$200",
+            interpreter: "Yes",
+            canceledBy: "N/A"
+        },
     ];
+
     return (
         <PagesLayout
             headerTitle="History"

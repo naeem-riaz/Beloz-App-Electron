@@ -1,59 +1,61 @@
-import React, { useState } from 'react';
-import logo from '../../imgs/logo.png';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Box, Button, Flex, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react';
+import React from 'react';
 import { HiOutlineBell } from "react-icons/hi2";
-import { RiArrowDropDownLine } from "react-icons/ri";
-
+import logo from '../../imgs/logo.png';
 
 const Topbar: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
-    };
-
     return (
-        <div className="bg-[#588CD8] flex items-center justify-between px-6 py-2">
-            {/* Left Side - Monogram */}
-            <img
-                src={logo}
-                alt='Logo'
-                className='w-44 h-11'
-            />
+        <Box bg="#588CD8" px={6} py={2}>
+            <Flex align="center" justify="space-between">
+                {/* Left Side - Logo */}
+                <Image src={logo} alt="Logo" boxSize="150px" h="44px" />
 
-            {/* Right Side - Notification and Admin Info */}
-            <div className="flex items-center gap-4">
-                {/* Notification Bell */}
-                <div className="bg-white px-2 pt-2 pb-1 rounded-lg ">
-                    <button className="relative">
-                        <HiOutlineBell size={24} className='p-0' />
-                        {/* Notification Red Dot */}
-                        <span className="absolute top-0 right-{-1} h-1.5 w-1.5 bg-red-600 rounded-full"></span>
-                    </button>
-                </div>
+                {/* Right Side - Notification and Admin Info */}
+                <Flex align="center" gap={4}>
+                    {/* Notification Bell */}
+                    <IconButton
+                        aria-label="Notifications"
+                        icon={<HiOutlineBell size={24} />}
+                        bg="white"
+                        p={2}
+                        borderRadius="lg"
+                        _hover={{ bg: "white" }}
+                        position="relative"
+                    >
+                        <Box
+                            as="span"
+                            position="absolute"
+                            top="2"
+                            right="2"
+                            h="10px"
+                            w="10px"
+                            bg="red.600"
+                            borderRadius="full"
+                        />
+                    </IconButton>
 
-                {/* Admin Info */}
-                <div className="relative">
-                    <div onClick={toggleDropdown} className="flex items-center pl-6 pr-4 py-2.5 space-x-2 bg-white  rounded-lg cursor-pointer">
-                        <div className="text-gray-600 flex flex-col">
-                            <span className='text-sm font-semibold' >Courtney Henry</span>
-                            <span className="text-sm font-normal">Admin</span>
-                        </div>
-                        <div>
-                            <RiArrowDropDownLine size={24} />
-                        </div>
-                    </div>
-
-
-                    {isOpen && (
-                        <div className="absolute right-0 mt-1 w-28 bg-white border rounded-lg shadow-lg">
-                            <button className="block px-4 py-2 text-gray-800 w-full text-center text-sm font-medium">
+                    {/* Admin Info */}
+                    <Menu>
+                        <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bg="white" px={4} py={2} borderRadius="lg" _hover={{ bg: "white" }} _active={{ bg: "white" }}>
+                            <Flex flexDirection="column" align="flex-start" textAlign="left">
+                                <Text fontSize="sm" fontWeight="semibold" color="gray.600">
+                                    Courtney Henry
+                                </Text>
+                                <Text fontSize="10px" color="gray.600">
+                                    Admin
+                                </Text>
+                            </Flex>
+                        </MenuButton>
+                        <MenuList>
+                            <MenuItem textAlign={'center'}>
                                 Logout
-                            </button>
-                        </div>
-                    )}
-                </div>
-            </div>
-        </div>
+                            </MenuItem>
+                        </MenuList>
+                    </Menu>
+                </Flex>
+            </Flex>
+        </Box>
     );
 };
 

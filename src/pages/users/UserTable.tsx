@@ -40,15 +40,15 @@ const UserTable: React.FC<UserTableProps> = ({ data }) => {
             <Table variant="unstyled">
                 <Thead >
                     <Tr borderBottom={"1px"} borderColor={'#CBD5E1'}>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Name</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Email</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Phone</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Role</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Extension</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Language</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Status</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Edit</Th>
-                        <Th px={6} py={3} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Delete</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Name</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Email</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Phone</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Role</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Extension</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Language</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Status</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Edit</Th>
+                        <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Delete</Th>
                     </Tr>
 
                 </Thead>
@@ -57,13 +57,13 @@ const UserTable: React.FC<UserTableProps> = ({ data }) => {
 
                     {data.map((item, index) => (
                         <Tr key={index} bg={index % 2 === 0 ? "white" : "gray.50"}>
-                            <Td px={6} py={2} fontSize="sm" color={headerTextColor}>{item.name}</Td>
-                            <Td px={6} py={2} fontSize="sm" color={headerTextColor}>{item.email}</Td>
-                            <Td px={6} py={2} fontSize="sm" color={headerTextColor}>{item.phone}</Td>
-                            <Td px={6} py={2} fontSize="sm" color={headerTextColor}>{item.role}</Td>
-                            <Td px={6} py={2} fontSize="sm" color={headerTextColor}>{item.extension}</Td>
-                            <Td px={6} py={2} fontSize="sm" color={headerTextColor}>{item.language}</Td>
-                            <Td px={6} py={2} fontSize="sm" color={headerTextColor}>
+                            <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.name}</Td>
+                            <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.email}</Td>
+                            <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.phone}</Td>
+                            <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.role}</Td>
+                            <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.extension}</Td>
+                            <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.language}</Td>
+                            <Td px={4} py={2} fontSize="sm" color={headerTextColor}>
                                 <Box
                                     px={2}
                                     py={1}
@@ -76,10 +76,10 @@ const UserTable: React.FC<UserTableProps> = ({ data }) => {
                                     {item.status}
                                 </Box>
                             </Td>
-                            <Td px={6} py={2} color={'#73C2FB'} onClick={onEditModalOpen}>
+                            <Td px={4} py={2} color={'#73C2FB'} onClick={onEditModalOpen}>
                                 <FaEdit cursor="pointer" />
                             </Td>
-                            <Td px={6} color={"#FF5252"} py={2} onClick={onDeleteModalOpen}>
+                            <Td px={4} color={"#FF5252"} py={2} onClick={onDeleteModalOpen}>
                                 <FaTrashAlt cursor="pointer" />
                             </Td>
                         </Tr>

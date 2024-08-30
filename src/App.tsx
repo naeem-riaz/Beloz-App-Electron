@@ -1,37 +1,23 @@
-// import React from 'react';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import LoginScreen from './components/LoginScreen';
-// import ForgotPasswordScreen from './components/ForgotPasswordScreen';
-// import OtpVerificationScreen from './components/OtpVerificationScreen';
-// import ResetPasswordScreen from './components/ResetPasswordScreen';
-
-// const App: React.FC = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<LoginScreen />} />
-//         <Route path="/forgot-password" element={<ForgotPasswordScreen />} />
-//         <Route path="/otp-verification" element={<OtpVerificationScreen />} />
-//         <Route path="/reset-password" element={<ResetPasswordScreen />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
 import React from 'react';
-import Sidebar from './components/navbar/Sidebar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainLayouts from './layouts/MainLayouts';
+import User from './pages/users/User';
+import History from './pages/history/History';
+import LanguageAndRate from './pages/Language-&-Rate/LanguageAndRate';
+import Extensions from './pages/Extensions/Extensions';
 
 const App: React.FC = () => {
   return (
-    <div className="flex">
-      <Sidebar />
-      {/* Baqi ka app content */}
-      <div className="flex-1 p-4">
-        {/* Yahan app ka main content ho ga */}
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayouts />}>
+          <Route path="/user" element={<User />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/language-rate" element={<LanguageAndRate />} />
+          <Route path="/extensions" element={<Extensions />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 };
 
