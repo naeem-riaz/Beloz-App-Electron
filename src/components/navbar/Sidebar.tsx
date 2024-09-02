@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUser, FaHistory, FaLanguage, FaPuzzlePiece } from 'react-icons/fa';
+import { FaUser, FaHistory, FaLanguage, FaPuzzlePiece, FaClipboardList, FaClock, FaMobileAlt, FaLaptop } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 interface SidebarLinkProps {
@@ -30,7 +30,7 @@ const Sidebar: React.FC = () => {
             <SidebarLink
                 label="User"
                 icon={<FaUser />}
-                to="/user"
+                to="/"
             />
             <SidebarLink
                 label="History"
@@ -46,6 +46,31 @@ const Sidebar: React.FC = () => {
                 label="Extensions"
                 icon={<FaPuzzlePiece />}
                 to="/extensions"
+            />
+            <SidebarLink
+                label="Availability Report"
+                icon={<FaClipboardList />}
+                to="/availability-report"
+            />
+            <SidebarLink
+                label="Web Timesheet"
+                icon={<FaLaptop />}
+                to="/web-timesheet"
+            />
+            <SidebarLink
+                label="Mobile Timesheet"
+                icon={<FaMobileAlt />}
+                to="/mobile-timesheet"
+            />
+            <SidebarLink
+                label="Web Customer"
+                icon={<FaLaptop />}
+                to="/web-customer"
+            />
+            <SidebarLink
+                label="Mobile Customer"
+                icon={<FaMobileAlt />}
+                to="/mobile-customer"
             />
         </div>
     );

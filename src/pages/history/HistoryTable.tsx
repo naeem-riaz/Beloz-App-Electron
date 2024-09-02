@@ -1,4 +1,4 @@
-import { Box, Divider, Table, Tbody, Td, Th, Thead, Tr, useColorModeValue } from '@chakra-ui/react';
+import { Box, Table, Tbody, Td, Th, Thead, Tr, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import '../../';
 
@@ -47,10 +47,10 @@ const HistoryTable: React.FC<HistoryTableProps> = ({ data }) => {
                             <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor} whiteSpace="nowrap">Canceled By</Th>
                         </Tr>
                     </Thead>
-                    <Divider w={'100%'} />
+
                     <Tbody>
                         {data.map((item, index) => (
-                            <Tr key={index} bg={index % 2 === 0 ? "white" : "gray.50"}>
+                            <Tr key={index} bg={index % 2 === 0 ? "white" : "#EEF4FB"}>
                                 <Td px={4} py={2} fontSize="sm" color={headerTextColor} whiteSpace="nowrap">{item.requester}</Td>
                                 <Td px={4} py={2} fontSize="sm" color={headerTextColor} whiteSpace="nowrap">{item.language}</Td>
                                 <Td px={4} py={2} fontSize="sm" color={headerTextColor} whiteSpace="nowrap">{item.dateTime}</Td>

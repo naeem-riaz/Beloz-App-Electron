@@ -1,8 +1,8 @@
-import { Box, Divider, Table, Tbody, Td, Th, Thead, Tr, useColorModeValue, useDisclosure } from '@chakra-ui/react';
+import { Box, Table, Tbody, Td, Th, Thead, Tr, useColorModeValue, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
-import CreateUserModalLayout from './create-user-modals/CreateUserModalLayout';
 import DeleteModalLayout from '../DeleteModalLayout';
+import CreateUserModalLayout from './create-user-modals/CreateUserModalLayout';
 
 interface TableData {
     name?: string;
@@ -39,7 +39,7 @@ const UserTable: React.FC<UserTableProps> = ({ data }) => {
         <Box overflowX="auto">
             <Table variant="unstyled">
                 <Thead >
-                    <Tr borderBottom={"1px"} borderColor={'#CBD5E1'}>
+                    <Tr borderBottom={"1px"} borderColor={'#CBD5E1'} >
                         <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Name</Th>
                         <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Email</Th>
                         <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Phone</Th>
@@ -52,11 +52,10 @@ const UserTable: React.FC<UserTableProps> = ({ data }) => {
                     </Tr>
 
                 </Thead>
-                <Divider w={'100%'} />
                 <Tbody>
 
                     {data.map((item, index) => (
-                        <Tr key={index} bg={index % 2 === 0 ? "white" : "gray.50"}>
+                        <Tr key={index} bg={index % 2 === 0 ? "white" : "#EEF4FB"}>
                             <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.name}</Td>
                             <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.email}</Td>
                             <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.phone}</Td>

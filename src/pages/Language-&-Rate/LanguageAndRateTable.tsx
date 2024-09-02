@@ -1,4 +1,4 @@
-import { Box, Divider, Table, Tbody, Td, Th, Thead, Tr, useColorModeValue, useDisclosure } from '@chakra-ui/react';
+import { Box, Table, Tbody, Td, Th, Thead, Tr, useColorModeValue, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import DeleteModalLayout from '../DeleteModalLayout';
@@ -42,10 +42,10 @@ const LanguageAndRateTable: React.FC<LanguageAndRateTableProps> = ({ data }) => 
                         <Th px={4} py={2} textAlign="left" fontSize="xs" fontWeight="medium" color={headerTextColor}>Delete</Th>
                     </Tr>
                 </Thead>
-                <Divider w={'100%'} />
+
                 <Tbody>
                     {data.map((item, index) => (
-                        <Tr key={index} bg={index % 2 === 0 ? "white" : "gray.50"}>
+                        <Tr key={index} bg={index % 2 === 0 ? "white" : "#EEF4FB"}>
                             <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.language}</Td>
                             <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.languageGroup}</Td>
                             <Td px={4} py={2} fontSize="sm" color={headerTextColor}>{item.normalCallRate}</Td>
