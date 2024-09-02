@@ -13,6 +13,7 @@ function createWindow() {
         },
 
     });
+    mainWindow.setMinimumSize(1400, 800);
 
     mainWindow.loadURL(
         'http://localhost:3000' || `file://${path.join(__dirname, './index.html')}`

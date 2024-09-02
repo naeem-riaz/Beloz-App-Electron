@@ -74,5 +74,4 @@ const LanguageAndRateTable: React.FC<LanguageAndRateTableProps> = ({ data }) => 
         </Box>
     );
 };
-
 export default LanguageAndRateTable;

@@ -1,8 +1,9 @@
-import { Flex } from '@chakra-ui/react';
+import { Button, useDisclosure } from '@chakra-ui/react';
+import { useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
 import PagesLayout from '../PagesLayout';
-import { useState } from 'react';
 import LanguageAndRateTable from './LanguageAndRateTable';
+import AddNewLanguageModal from './LanguageAndRateModals/AddNewLanguageModal';
 
 const LanguageAndRate: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -10,6 +11,12 @@ const LanguageAndRate: React.FC = () => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
+  const {
+    isOpen: isPriceEditModalOpen,
+    onOpen: onPriceEditModalOpen,
+    onClose: onPriceEditModalClose
+  } = useDisclosure();
+
   const tableData = [
     {
       language: "English",
@@ -57,13 +64,19 @@ const LanguageAndRate: React.FC = () => {
         onPageChange={handlePageChange}
         tableArea={<LanguageAndRateTable data={tableData} />}
       >
-        <Flex>
-
-        </Flex>
-
-
+        <Button
+          color="white"
+          bg="#588CD8"
+          _hover={{ bg: "#588CD8" }}
+          onClick={onPriceEditModalOpen}
+        >
+          Add New Language
+        </Button>
       </PagesLayout >
-      );
+      <AddNewLanguageModal
+        isOpen={isPriceEditModalOpen}
+        onClose={onPriceEditModalClose}
+      />
     </>
   )
 }

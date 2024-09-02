@@ -251,8 +251,17 @@ const CreateUserModalLayout: React.FC<CreateUserModalLayoutProps> = ({ heading, 
                     </Grid>
                 </ModalBody>
                 <ModalFooter w={'100%'} gap={4} justifyContent={'space-between'}>
-                    <Button w={'100%'} bg={'none'} border={'1px solid'} borderColor={'#BDBDBD'} _hover={{ bg: "none" }} onClick={onClose}>Cancel</Button>
-                    <Button w={'100%'} colorScheme="blue" onClick={onClose}>
+                    <Button
+                        w={'100%'}
+                        bg={'none'}
+                        border={'1px solid'}
+                        borderColor={'#BDBDBD'}
+                        _hover={{ bg: "#588CD8", color: "white" }}
+                        onClick={onClose}
+                    >
+                        Cancel
+                    </Button>
+                    <Button w={'100%'} bg={'#588CD8'} color="white" onClick={onClose}>
                         {buttonText}
                     </Button>
                 </ModalFooter>

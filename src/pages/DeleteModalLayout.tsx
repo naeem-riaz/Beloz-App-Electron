@@ -18,9 +18,14 @@ const DeleteModalLayout: React.FC<DeleteModalLayoutProps> = ({ isOpen, onClose, 
                     <Text textAlign={'center'} fontSize="lg" fontWeight="bold">{heading}</Text>
                     <Text fontSize="sm" >{subheading}</Text>
                 </ModalHeader>
-                <ModalCloseButton />
+                <ModalCloseButton _hover={{ bg: 'white' }} />
                 <ModalBody display={'flex'} gap={4}>
-                    <Button bg={'#FF5252'} w={'100%'} color={'white'}>
+                    <Button
+                        bg={'#FF5252'}
+                        w={'100%'}
+                        color={'white'}
+                        _hover={{ bg: "#c30010" }}
+                    >
                         {buttonText}
                     </Button>
                     <Button
@@ -30,7 +35,7 @@ const DeleteModalLayout: React.FC<DeleteModalLayoutProps> = ({ isOpen, onClose, 
                         borderColor="#BDBDBD"
                         borderRadius="4px"
                         bg="white"
-                        _hover={{ bg: "white" }}
+                        _hover={{ bg: "#588CD8", color: "white" }}
                     >
                         Cancel
                     </Button>
